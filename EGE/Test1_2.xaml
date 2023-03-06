@@ -1,0 +1,48 @@
+﻿<Window x:Class="EGE.Test1_2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EGE"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Вариант 1" ResizeMode="NoResize" Height="1080" Width="1920" WindowState="Maximized"
+        Background="AliceBlue">
+    <Grid>
+        <Border HorizontalAlignment="Center" MinWidth="1800" MinHeight="350" VerticalAlignment="Bottom" CornerRadius="50" Background="White" Margin="0 0 0 500" Cursor="">
+            <Border.Effect >
+                <DropShadowEffect Color="Black" BlurRadius="50" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="1800" Height="350" Margin="0">
+                <TextBlock TextWrapping="Wrap" x:Name="Question1" FontWeight="Bold" Height="350" Width="1800" HorizontalAlignment="Right" 
+                           Text="Расставьте знаки препинания. Укажите цифры, на месте которых должны стоять запятые.
+                           Может быть(1) нам предстоит узнать именно сегодня(2) когда(3) человеку важно связать(4) 
+                           в своем сознании новейшие данные об элементарных частицах(5) о «белых карликах» и «черных дырах» Вселенной(6) с белоснежностью ромашек на лесных полянах(7) с роскошными(8) пульсирующими созвездиями над головой."
+                           TextAlignment="Left" Padding="80" 
+                           FontFamily="./fonts/#Multiround Pro" FontSize="26">
+                </TextBlock>
+            </StackPanel>
+        </Border>
+        <Border HorizontalAlignment="Center" MinWidth="500" MinHeight="150" VerticalAlignment="Bottom" CornerRadius="50" Background="White" Margin="0 0 0 900" Cursor="">
+            <Border.Effect >
+                <DropShadowEffect Color="Black" BlurRadius="50" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="500" Height="150" Margin="0">
+                <TextBlock TextWrapping="NoWrap" x:Name="Nazvanie1" FontWeight="Bold" Height="150" Width="500" HorizontalAlignment="Center" 
+                           Text="Пунктационный анализ" TextAlignment="Left" Padding="60" 
+                           FontFamily="./fonts/#Multiround Pro" FontSize="26">
+                </TextBlock>
+            </StackPanel>
+        </Border>
+        <Border HorizontalAlignment="Center" VerticalAlignment="Bottom" CornerRadius="25">
+            <StackPanel Height="398" Width="690">
+                <TextBox Height="70" materialDesign:HintAssist.Hint="Поле для ответа" FontFamily="./fonts/#Multiround Pro" FontSize="15" Style="{StaticResource MaterialDesignFilledTextBox}" x:Name="Answer2" />
+                <Button Style="{StaticResource MaterialDesignFlatButton}"  Height="60" Content="Ответить" FontFamily="./fonts/#Multiround Pro" FontSize="30" x:Name="check2" Click="check2_Click"/>
+                <StackPanel Orientation="Horizontal" >
+                    <Button x:Name="Hint" Style="{DynamicResource MaterialDesignFloatingActionButton}" Content="Подсказка!" Margin="100 30 0 0" Width="150" Height="150"  FontFamily="./fonts/#Multiround Pro" FontSize="20" Click="Hint_Click" Background="SlateGray" BorderBrush="Snow"/>
+                    <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" Margin="200 30 0 0" Content="Пропустить задание" Width="150" Height="150" FontFamily="./fonts/#Multiround Pro" FontSize="10" x:Name="skip" Click="skip_Click" Background="SlateGray" BorderBrush="Snow"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

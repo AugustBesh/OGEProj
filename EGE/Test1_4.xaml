@@ -1,0 +1,66 @@
+﻿<Window x:Class="EGE.Test1_4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EGE"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Вариант 1" ResizeMode="NoResize" Height="1080" Width="1920" WindowState="Maximized"
+        Background="AliceBlue">
+    <Grid>
+        <Border HorizontalAlignment="Center" MinWidth="1800" MinHeight="350" VerticalAlignment="Bottom" CornerRadius="50" Background="White" Margin="0 0 0 500" Cursor="">
+            <Border.Effect >
+                <DropShadowEffect Color="Black" BlurRadius="50" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="1800" Height="350" Margin="0">
+                <TextBlock TextWrapping="Wrap" x:Name="Question1" FontWeight="Bold" Height="350" Width="1800" HorizontalAlignment="Right" TextAlignment="Left" Padding="40" 
+                           FontFamily="./fonts/#Multiround Pro" FontSize="26">
+                    <Run Text="Укажите варианты ответов, в которых дано верное объяснение написания выделенного слова. Запишите номера этих ответов.  "/><LineBreak/><Run Text="1)  БЕСПОЛЕЗНЫЙ  — на конце приставки перед буквой, обозначающей глухой согласный звук, пишется буква С.  "/><LineBreak/><Run Text="2)  ПОКРАШЕННЫЙ (забор)  — в суффиксе -ЕНН- прилагательного пишется -НН-. "/><LineBreak/><Run Text="3)  ВЫРАСТИТЬ (урожай)  — написание безударной чередующейся гласной в корне слова зависит от ударения.  "/><LineBreak/><Run Text="4)  (охватывает) ДРОЖЬ  — в существительных III склонения после шипящего буква Ь пишется.  "/><LineBreak/><Run Text="5)  (съел) ПОЛ-ЯГОДКИ  — слова с ПОЛ- всегда пишутся через дефис."/></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border HorizontalAlignment="Center" MinWidth="500" MinHeight="150" VerticalAlignment="Bottom" CornerRadius="50" Background="White" Margin="0 0 0 900" Cursor="">
+            <Border.Effect >
+                <DropShadowEffect Color="Black" BlurRadius="50" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="500" Height="150" Margin="0">
+                <TextBlock TextWrapping="NoWrap" x:Name="Nazvanie1" FontWeight="Bold" Height="150" Width="500" HorizontalAlignment="Center" Text="Орфографический анализ" TextAlignment="Left" Padding="40 60" 
+                           FontFamily="./fonts/#Multiround Pro" FontSize="26">
+
+                </TextBlock>
+            </StackPanel>
+        </Border>
+        <Border HorizontalAlignment="Left" VerticalAlignment="Bottom" CornerRadius="25" Background="Snow" Margin="10 0 0 10">
+            <Border.Effect >
+                <DropShadowEffect Color="Black" BlurRadius="50" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel Height="400" Width="1200" Margin="10 0 0 0">
+                <TextBlock FontWeight="Bold" TextWrapping="Wrap"  HorizontalAlignment="Left" Text="1) БЕСПОЛЕЗНЫЙ  — на конце приставки перед буквой, обозначающей глухой согласный звук, пишется буква С." TextAlignment="Left"
+                           FontFamily="./fonts/#Multiround Pro" FontSize="26" Margin="15">
+                </TextBlock>
+                <TextBlock FontWeight="Bold" TextWrapping="Wrap" HorizontalAlignment="Left" Text="2)  ПОКРАШЕННЫЙ (забор)  — в суффиксе -ЕНН- прилагательного пишется -НН-." TextAlignment="Left"
+                           FontFamily="./fonts/#Multiround Pro" FontSize="26" Margin="10">
+                </TextBlock>
+                <TextBlock FontWeight="Bold" TextWrapping="Wrap"  HorizontalAlignment="Left" Text="3) ВЫРАСТИТЬ (урожай)  — написание безударной чередующейся гласной в корне слова зависит от ударения." TextAlignment="Left"
+                           FontFamily="./fonts/#Multiround Pro" FontSize="26" Margin="10">
+                </TextBlock>
+                <TextBlock FontWeight="Bold" TextWrapping="Wrap"  HorizontalAlignment="Left" Text="4) (охватывает) ДРОЖЬ  — в существительных III склонения после шипящего буква Ь пишется." TextAlignment="Left"
+                           FontFamily="./fonts/#Multiround Pro" FontSize="26" Margin="10">
+                </TextBlock>
+                <TextBlock FontWeight="Bold"  HorizontalAlignment="Left" Text="5) (съел) ПОЛ-ЯГОДКИ  — слова с ПОЛ- всегда пишутся через дефис." TextAlignment="Left"
+                           FontFamily="./fonts/#Multiround Pro" FontSize="26" Margin="10" TextWrapping="Wrap">
+                </TextBlock>
+            </StackPanel>
+        </Border>
+        <Border HorizontalAlignment="Right" VerticalAlignment="Bottom" CornerRadius="25">
+            <StackPanel Height="398" Width="690">
+                <TextBox Height="70" materialDesign:HintAssist.Hint="Поле для ответа" FontFamily="./fonts/#Multiround Pro" FontSize="15" Style="{StaticResource MaterialDesignFilledTextBox}" x:Name="Answer4" />
+                <Button Style="{StaticResource MaterialDesignFlatButton}"  Height="60" Content="Ответить" FontFamily="./fonts/#Multiround Pro" FontSize="30" x:Name="check3" Click="check3_Click" />
+                <StackPanel Orientation="Horizontal" >
+                    <Button x:Name="Hint" Style="{DynamicResource MaterialDesignFloatingActionButton}" Content="Подсказка!" Margin="100 30 0 0" Width="150" Height="150" Background="SlateGray" BorderBrush="Snow" FontFamily="./fonts/#Multiround Pro" FontSize="20" Click="Hint_Click"/>
+                    <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" Margin="200 30 0 0" Content="Пропустить задание" Width="150" Height="150" FontFamily="./fonts/#Multiround Pro" Background="SlateGray" BorderBrush="Snow" FontSize="10"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

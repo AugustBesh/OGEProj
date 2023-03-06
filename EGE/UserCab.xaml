@@ -1,0 +1,83 @@
+﻿<Window x:Class="EGE.UserCab"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EGE"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Background="AliceBlue"
+        Title="UserCab" ResizeMode="NoResize" Height="1080" Width="1920" WindowState="Maximized" x:Name="Wcab">
+    <Grid>
+        <StackPanel Width="700" Height="700" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0">
+            <Border HorizontalAlignment="Left" Height="600" Width="650" Background="Snow" Margin="30 30 0 0" CornerRadius="50">
+                <Border.Effect >
+                    <DropShadowEffect Color="Black" BlurRadius="50" ShadowDepth="0" />
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="Информация о пользователе" TextAlignment="Center" Margin="0 20 0 0" 
+                       FontSize="30" FontWeight="Bold" FontFamily="./fonts/#Multiround Pro" Cursor=""/>
+                    <TextBlock x:Name="UserName" Text="Имя:" TextAlignment="Left" Margin="30 30 0 0" 
+                       FontSize="30" FontWeight="Bold" FontFamily="./fonts/#Multiround Pro"/>
+                    <TextBlock x:Name="Uroki" Text="Пройденных уроков: 0" TextAlignment="Left" Margin="30 30 0 0" 
+                       FontSize="30" FontWeight="Bold" FontFamily="./fonts/#Multiround Pro"/>
+                    <Button Style="{StaticResource MaterialDesignToolForegroundButton}"  Content="Загрузить аватар" Width="400" FontSize="30" Height="50" 
+                            HorizontalAlignment="Left" x:Name="Avatar" Click="Avatar_Click" HorizontalContentAlignment="Left" Padding="30 0 0 0" />
+                    <Image Margin="0 10 0 0" MaxHeight="330" MaxWidth="330"  x:Name="imgPicture"/>
+                </StackPanel>
+
+            </Border>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="140 30 30 0">
+            <Border Width="600" Margin="0" Height="600" x:Name="testi">
+                <Border.Effect >
+                    <DropShadowEffect Color="MintCream" BlurRadius="100" ShadowDepth="0" />
+                </Border.Effect>
+                <StackPanel>
+                    <Button x:Name="Test1" Margin="5" Content="Test1" Height="70" Click="Test1_Click" FontFamily="./fonts/#Multiround Pro" Background="SlateGray" BorderBrush="MediumPurple"/>
+                    <Button x:Name="Test2" Margin="5" Content="Test2" Height="70" Width="0" Click="Test2_Click" FontFamily="./fonts/#Multiround Pro" Background="SlateGray" BorderBrush="MediumPurple"/>
+                    <Button x:Name="Test3" Margin="5" Content="Test3" Height="70" Width="0" Click="Test3_Click" FontFamily="./fonts/#Multiround Pro" Background="SlateGray" BorderBrush="MediumPurple"/>
+                    <Button x:Name="Test4" Margin="5" Content="Test4" Height="70" Width="0" Click="Test4_Click" FontFamily="./fonts/#Multiround Pro" Background="SlateGray" BorderBrush="MediumPurple"/>
+                    <Button x:Name="Test5" Margin="5" Content="Test5" Height="70" Width="0" Click="Test5_Click" FontFamily="./fonts/#Multiround Pro" Background="SlateGray" BorderBrush="MediumPurple"/>
+                    <Button x:Name="Test6" Margin="5" Content="Test6" Height="70" Width="0" Click="Test6_Click" FontFamily="./fonts/#Multiround Pro" Background="SlateGray" BorderBrush="MediumPurple"/>
+                    <Button x:Name="Test7" Margin="5" Content="Test7" Height="70" Width="0" Click="Test7_Click" FontFamily="./fonts/#Multiround Pro" Background="SlateGray" BorderBrush="MediumPurple"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        <Border HorizontalAlignment="Center" MinWidth="1150" MinHeight="350" 
+                VerticalAlignment="Bottom" CornerRadius="50" Background="Snow" Margin="0 0 330 30" Cursor="">
+            <Border.Effect >
+                <DropShadowEffect Color="Black" BlurRadius="50" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="1150" Height="350" Margin="0">
+                <TextBlock TextWrapping="Wrap" 
+                    x:Name="txtRules" FontWeight="Bold" Height="350" Width="1150" HorizontalAlignment="Right" Text="(Случайное правило)" TextAlignment="Left" Padding="80" 
+                           FontFamily="./fonts/#Multiround Pro" FontSize="30"/>
+            </StackPanel>
+        </Border>
+        <Image x:Name="teacher" Source="/images/teacher2.png" Width="316" Height="350" HorizontalAlignment="Left" 
+               VerticalAlignment="Bottom" Margin="0,0,0,30" OpacityMask="Black" />
+        <Border HorizontalAlignment="Right" VerticalAlignment="Top" Width="500" Height="1000" Margin="30">
+            <StackPanel>
+                <ToggleButton Style="{StaticResource MaterialDesignToolButton}" Height="250" Width="250" x:Name="logo" Checked="logo_Checked" IsChecked="False" Unchecked="logo_Unchecked">
+                    <Image Source="/images/logo/logo-new.png" Height="250" Width="250" VerticalAlignment="Top"/>
+                </ToggleButton>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
+                <ProgressBar Minimum="0" Maximum="100" Value="0" x:Name="pg" Height="25"/>
+                <TextBlock Text="Прогресс по тестам" HorizontalAlignment="Center" FontSize="25" FontFamily="./fonts/#Multiround Pro" x:Name="pgtext"/>
+                <Frame x:Name="TestFrame" NavigationUIVisibility="Hidden" Width="500" Height="500" Source="TestForFrame.xaml" Margin="0 30 0 0"/>
+            </StackPanel>
+        </Border>
+        <Border HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="490" Margin="30">
+            <StackPanel Orientation="Horizontal">
+                <Button Background="SlateGray" BorderBrush="MediumPurple" FontFamily="./fonts/#Multiround Pro" Width="100" Height="100" Content="Выйти" x:Name="Quit" Click="Quit_Click" Margin="35 0 0 0" FontSize="18"/>
+                <Button Background="SlateGray" BorderBrush="MediumPurple" FontFamily="./fonts/#Multiround Pro" Width="100" Height="100" Margin="60 0 0 0" Content="Почта" x:Name="Help" Click="Help_Click" FontSize="18"/>
+                <Button Background="SlateGray" BorderBrush="MediumPurple" FontFamily="./fonts/#Multiround Pro" Width="100" Height="100"  Margin="60 0 0 0" x:Name="Site" Click="Site_Click" FontSize="19">
+                    <TextBlock TextAlignment="Center">Наш
+                        <LineBreak/>сайт
+                    </TextBlock>
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
