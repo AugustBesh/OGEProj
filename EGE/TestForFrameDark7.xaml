@@ -1,0 +1,35 @@
+﻿<Page x:Class="EGE.TestForFrameDark7"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EGE"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="500"
+      Title="TestForFrameDark" Height="500" Width="500" Background="Gray">
+    <Grid>
+        <Border BorderBrush="Indigo" BorderThickness="2" CornerRadius="15" Background="WhiteSmoke"
+            Width="480" Height="230"  VerticalAlignment="Top" Margin="0 20 0 0">
+            <StackPanel  >
+                <TextBlock x:Name="answerframe" Margin="15" TextWrapping="Wrap" FontSize="30" 
+                           Text="Сколько частей речи в русском языке?" 
+                           TextAlignment="Center" FontFamily="./fonts/#Multiround Pro"/>
+            </StackPanel>
+        </Border>
+        <Border VerticalAlignment="Bottom" Height="210" Margin="0 0 0 20" Width="450"
+                Background="WhiteSmoke" CornerRadius="10" BorderThickness="2" BorderBrush="Indigo">
+            <StackPanel>
+                <TextBlock  Text="Выберите вариант ответа" TextAlignment="Center"
+                           FontFamily="./fonts/#Multiround Pro" Margin="15"
+                           FontSize="25"/>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="10" Height="140">
+                    <Button x:Name="Var1" Click="Var1_Click" Content="3" Style="{StaticResource MaterialDesignFloatingActionButton}" FontSize="25"/>
+                    <Button x:Name="Var2" Click="Var2_Click" Content="5" Margin="5" Style="{StaticResource MaterialDesignFloatingActionButton}" FontSize="25"/>
+                    <Button x:Name="Var3" Click="Var3_Click" Content="7" Margin="5" Style="{StaticResource MaterialDesignFloatingActionButton}" FontSize="25"/>
+                    <Button x:Name="Var4" Click="Var4_Click" Content="12" Margin="5" Style="{StaticResource MaterialDesignFloatingActionButton}" FontSize="25"/>
+                    <Button x:Name="Good" Click="Good_Click" Content="10" Margin="5" Style="{StaticResource MaterialDesignFloatingActionButton}" FontSize="25"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

@@ -55,6 +55,60 @@
     <Compile Update="Test1_2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="TestForFrame10.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrame9.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrame8.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrame7.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrame6.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrame5.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrame4.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrame3.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrame2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrameDark2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrameDark3.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrameDark4.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrameDark5.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrameDark6.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrameDark7.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrameDark8.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrameDark9.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestForFrameDark10.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

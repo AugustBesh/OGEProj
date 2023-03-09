@@ -21,6 +21,7 @@ namespace EGE
     {
         public Test1_3()
         {
+
             InitializeComponent();
         }
 
@@ -47,7 +48,7 @@ namespace EGE
             }
             if (Ans == "встретить радостно" || Ans == "радостно встретить")
             {
-                new Test1_4().Show();
+                new UserCab(login).Show();
                 a++;
             }
             else

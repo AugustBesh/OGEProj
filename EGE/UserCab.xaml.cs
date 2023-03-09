@@ -26,7 +26,7 @@ namespace EGE
         public UserCab(string login)
         {
             InitializeComponent();
-            UserName.Text = $"Имя: {login}";
+            UserName.Text = $"Имя:{login}";
             pgtext.Text = $"Прогресс по тестам = {pg.Value}%";
             Random rand = new Random();
             int ind = rand.Next(1, 102); //случайное число от 1 до 102
@@ -41,10 +41,11 @@ namespace EGE
                 //{
                 //    MessageBox.Show(r.Ruledescription);
                 //}
+                
             }
         }
         int a = 0;
-
+        
         private void DoubleAnimation_Completed(object sender, EventArgs e)
         {
 
@@ -88,6 +89,7 @@ namespace EGE
             Uroki.Text = $"Пройденных уроков: {a}";
             pg.Value += 15;
             pgtext.Text = $"Прогресс по тестам = {pg.Value}%";
+            
         }
 
         private void Test4_Click(object sender, RoutedEventArgs e)
@@ -182,8 +184,29 @@ namespace EGE
             Help.Background = Brushes.Indigo;
             Site.Background = Brushes.Indigo;
             testi.Effect = base.Effect;
+            Random RandTest = new Random();
+            int XTest = RandTest.Next(1, 10);
             TestFrame.Navigate(new TestForFrameDark());
-
+            if (XTest == 1)
+                TestFrame.Navigate(new TestForFrameDark());
+            else if (XTest == 2)
+                TestFrame.Navigate(new TestForFrameDark());
+            else if (XTest == 3)
+                TestFrame.Navigate(new TestForFrameDark());
+            else if (XTest == 4)
+                TestFrame.Navigate(new TestForFrameDark());
+            else if (XTest == 5)
+                TestFrame.Navigate(new TestForFrameDark());
+            else if (XTest == 6)
+                TestFrame.Navigate(new TestForFrameDark());
+            else if (XTest == 7)
+                TestFrame.Navigate(new TestForFrameDark());
+            else if (XTest == 8)
+                TestFrame.Navigate(new TestForFrameDark());
+            else if (XTest == 9)
+                TestFrame.Navigate(new TestForFrameDark());
+            else if (XTest == 10)
+                TestFrame.Navigate(new TestForFrameDark());
         }
 
         private void logo_Unchecked(object sender, RoutedEventArgs e)
@@ -199,7 +222,29 @@ namespace EGE
             Quit.Background = Brushes.SlateGray;
             Help.Background = Brushes.SlateGray;
             Site.Background = Brushes.SlateGray;
+            Random RandTest = new Random();
+            int XTest = RandTest.Next(1, 10);
+
+            if (XTest == 1)
             TestFrame.Navigate(new TestForFrame());
+            else if (XTest ==2)
+                TestFrame.Navigate(new TestForFrame());
+            else if (XTest == 3)
+                TestFrame.Navigate(new TestForFrame());
+            else if (XTest == 4)
+                TestFrame.Navigate(new TestForFrame());
+            else if (XTest == 5)
+                TestFrame.Navigate(new TestForFrame());
+            else if (XTest == 6)
+                TestFrame.Navigate(new TestForFrame());
+            else if (XTest == 7)
+                TestFrame.Navigate(new TestForFrame());
+            else if (XTest == 8)
+                TestFrame.Navigate(new TestForFrame());
+            else if (XTest == 9)
+                TestFrame.Navigate(new TestForFrame());
+            else if (XTest == 10)
+                TestFrame.Navigate(new TestForFrame());
         }
 
         private void Site_Click(object sender, RoutedEventArgs e)
